@@ -99,6 +99,36 @@
         padding: 2rem 2rem 1rem 4rem;
 
     }
+    .middle_section{
+
+    }
+    .movingObject{
+        position: absolute;
+    }
+    .coins{
+        display: grid;
+        grid-template: "j k l";
+        justify-content: center;
+        overflow: hidden;
+        z-index: -5;
+    }
+    .coins1{
+        display: flex;
+        grid-area: j;
+        flex-direction: column;
+        overflow: hidden;
+        height: 500px;
+
+    }
+    .coins2{
+        display: grid;
+        grid-area: k;
+    }
+    .coins3{
+        display: grid;
+        grid-area: l;
+    }
+
     .blub_element_first{
         font-size: 1rem;
         margin-left: 0.5rem;

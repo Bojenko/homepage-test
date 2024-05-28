@@ -1,7 +1,8 @@
-@media  all and (min-width: 1650px) and (orientation: landscape) {
-    html{
+@media all and (min-width: 1650px) and (orientation: landscape) {
+    html {
         background-color: #191D0A;
     }
+
     html, body {
         color: white;
         height: 100%;
@@ -10,19 +11,21 @@
         font-family: 'Lexend', sans-serif;
 
     }
+
     body {
         background: url('back.svg') no-repeat center center fixed;
         /*background-color: #191D0A;*/
 
     }
 
-    .main{
+    .main {
         overflow: hidden;
         background-size: auto;
         height: 100vh;
 
     }
-    .blur{
+
+    .blur {
         height: 100vh;
         margin: 0;
         overflow: hidden;
@@ -32,21 +35,25 @@
         justify-items: center;
 
     }
-    .content{
+
+    .content {
         display: grid;
         grid-template-columns: 5fr 4fr 5fr;
         width: 80%;
     }
-    .left_section{
+
+    .left_section {
 
         align-items: center;
         justify-content: center;
         align-content: center;
     }
-    .left_title{
+
+    .left_title {
         font-size: 5rem;
     }
-    .partner_button{
+
+    .partner_button {
         font-size: xx-large;
         display: grid;
         border: 2px solid #F97247;
@@ -59,25 +66,29 @@
         align-items: center;
 
     }
-    .sometext{
+
+    .sometext {
         opacity: 60%;
         font-size: 1.6rem;
         margin-bottom: 2rem;
         margin-top: 2rem;
     }
-    .right_section{
+
+    .right_section {
         display: flex;
         justify-content: center;
         align-items: flex-end;
         flex-direction: column;
     }
-    .blub_section{
+
+    .blub_section {
         display: flex;
         flex-direction: column;
         align-items: center;
         font-size: 2rem;
     }
-    .blub_window{
+
+    .blub_window {
         display: flex;
         height: 30rem;
         width: 28rem;
@@ -89,7 +100,8 @@
         align-items: center;
         overflow-y: scroll;
     }
-    .blub_element{
+
+    .blub_element {
         font-size: 1rem;
         margin-left: 0.5rem;
         margin-right: 0.5rem;
@@ -99,37 +111,53 @@
         padding: 2rem 2rem 1rem 4rem;
 
     }
-    .middle_section{
+
+    .middle_section {
 
     }
-    .movingObject{
+
+    .movingObject {
         position: absolute;
     }
-    .coins{
+
+    .coins {
         display: grid;
         grid-template: "j k l";
         justify-content: center;
         overflow: hidden;
-        z-index: -5;
     }
-    .coins1{
-        display: flex;
+
+    .coins1 {
+        display: grid;
         grid-area: j;
         flex-direction: column;
         overflow: hidden;
-        height: 500px;
+        height: 100vh;
+        opacity: 50%;
+        width: 12ch;
 
     }
-    .coins2{
+
+    .coins2 {
         display: grid;
         grid-area: k;
-    }
-    .coins3{
-        display: grid;
-        grid-area: l;
+        flex-direction: column;
+        overflow: hidden;
+        height: 100vh;
+        width: 12ch;
     }
 
-    .blub_element_first{
+    .coins3 {
+        display: grid;
+        grid-area: l;
+        flex-direction: column;
+        overflow: hidden;
+        height: 100vh;
+        width: 12ch;
+        opacity: 50%;
+    }
+
+    .blub_element_first {
         font-size: 1rem;
         margin-left: 0.5rem;
         margin-right: 0.5rem;
@@ -138,27 +166,38 @@
         border-radius: 196px;
         padding: 2rem 2rem 1rem 4rem;
     }
-    .blub_date{
+
+    .blub_date {
         padding-top: 1rem;
         padding-bottom: 0rem;
         color: #FFFFFF99;
     }
-    .header{
+
+    .header {
         display: grid;
         justify-content: space-evenly;
         align-items: center;
         width: 80%;
+        height: 10vh;
         border: 4px solid #F97247;
         border-radius: 64px;
         grid-template-columns: 1fr 2fr 1fr;
+        background-color: #191D0A;
+        z-index: 100;
+        position: absolute;
 
     }
-    .left_section{
+
+    .left_section {
         display: grid;
 
     }
-    .footer-container{
+
+    .footer-container {
         width: 100%;
+        height: 10vh;
+        position: absolute;
+        bottom: 0;
         display: grid;
         justify-content: space-evenly;
         align-items: center;
@@ -166,20 +205,25 @@
         border-bottom: 0px;
         border-radius: 64px 64px 0px 0px;
         background-color: #311212;
+        z-index: 100;
+        opacity: 100%;
     }
 
-    .menu{
+    .menu {
         justify-content: space-evenly;
         text-align: center;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     }
-    .menu,span {
+
+    .menu, span {
         display: grid;
     }
-    .buttons{
+
+    .buttons {
         display: flex;
         justify-content: center;
     }
+
     .lang_button {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -191,14 +235,17 @@
         text-align: center;
         align-items: center;
     }
-    .lang_icon{
+
+    .lang_icon {
         display: grid;
     }
-    .lang_value{
+
+    .lang_value {
         display: grid;
         justify-self: start;
     }
-    .login_button{
+
+    .login_button {
         display: grid;
         border: 2px solid #EBF29D;
         border-radius: 24px;
@@ -211,7 +258,7 @@
         margin-right: 1rem;
     }
 
-    .signup_button{
+    .signup_button {
         display: grid;
         border: 2px solid #F97247;
         border-radius: 24px;
@@ -222,19 +269,22 @@
         text-align: center;
         align-items: center;
     }
-    .footer-container{
+
+    .footer-container {
         display: grid;
         grid-template: ". . . . . ."
                    "a . . . . f";
     }
-    .info_pages{
+
+    .info_pages {
         grid-area: a;
         display: grid;
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(3, 1fr);
         text-align: center;
         justify-content: center;
     }
-    .social_media_area{
+
+    .social_media_area {
         display: grid;
         column-gap: 2%;
         row-gap: 10%;
@@ -244,34 +294,41 @@
                 "t l y o g v";
 
     }
-    .oursocialmedia{
+
+    .oursocialmedia {
         display: grid;
         grid-area: s;
         text-align: right;
     }
-    .twitter_icon{
+
+    .twitter_icon {
         display: grid;
         grid-area: t;
     }
-    .linkedin_icon{
+
+    .linkedin_icon {
         display: grid;
         grid-area: l;
     }
-    .youtube_icon{
+
+    .youtube_icon {
         display: grid;
         grid-area: y;
     }
-    .tiktok_icon{
+
+    .tiktok_icon {
         display: grid;
         grid-area: o;
     }
-    .telegram_icon{
+
+    .telegram_icon {
         display: grid;
         grid-area: g;
     }
-    .vk_icon{
+
+    .vk_icon {
         display: grid;
         grid-area: v;
     }
-    
+
 }

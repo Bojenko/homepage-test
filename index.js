@@ -45,3 +45,49 @@ function makeBlubs(times){
     }
 }
 
+//-------------------
+function makeAnimation(){
+    const container = document.getElementById('coins1');
+    const objects = [
+        document.getElementById('object1'),
+        document.getElementById('object2'),
+        document.getElementById('object3'),
+        document.getElementById('object4'),
+        document.getElementById('object5'),
+        document.getElementById('object6'),
+    ];
+
+    const speed = 2; // скорость движения
+    const containerHeight = container.clientHeight;
+    const objectHeight = objects[0].clientHeight;
+    const initialOffsets = [0, 115, 350, 470, 590, 710]; // начальные отступы объектов
+
+// Расчет начальных позиций объектов
+    for (let i = 0; i < objects.length; i++) {
+        initialOffsets.push(-i * (objectHeight + 10));
+    }
+
+    objects.forEach((object, index) => {
+        object.style.top = initialOffsets[index] + 'px';
+    });
+    moveObjects(objects, speed,containerHeight,objectHeight);
+}
+
+
+function moveObjects(objects, speed, containerHeight, objectHeight) {
+    objects.forEach(object => {
+        let currentPos = parseFloat(object.style.top);
+        currentPos += speed;
+
+        if (currentPos > containerHeight) {
+            currentPos = -objectHeight;
+        }
+
+        object.style.top = currentPos + 'px';
+    });
+}
+
+ // каждые 20 миллисекунд обновляем позицию
+// document.addEventListener('DOMContentLoaded', function() {
+//     setInterval(makeAnimation, 20);
+// });

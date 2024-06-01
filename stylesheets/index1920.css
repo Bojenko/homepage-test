@@ -1,5 +1,4 @@
-@media all and (min-width: 1000px) and (orientation: landscape) and (max-width: 1650px) {
-
+@media all and (min-width: 1650px) {
     html {
         background-color: #191D0A;
     }
@@ -14,7 +13,7 @@
     }
 
     body {
-        background: url('back.svg') no-repeat center center fixed;
+        background: url('/public/back.svg') no-repeat center center fixed;
         /*background-color: #191D0A;*/
 
     }
@@ -246,30 +245,6 @@
         justify-self: start;
     }
 
-    .login_button {
-        display: grid;
-        border: 2px solid #EBF29D;
-        border-radius: 24px;
-        height: 2.5rem;
-        width: 6rem;
-        justify-items: center;
-        text-align: center;
-        align-items: center;
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
-
-    .signup_button {
-        display: grid;
-        border: 2px solid #F97247;
-        border-radius: 24px;
-        background-color: #F97247;
-        height: 2.5rem;
-        width: 5rem;
-        justify-items: center;
-        text-align: center;
-        align-items: center;
-    }
 
     .footer-container {
         display: grid;
@@ -331,7 +306,66 @@
         display: grid;
         grid-area: v;
     }
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    .btn-4 {
+        border: 1px solid;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
 
+    .btn-4 span {
+        z-index: 20;
+    }
+
+    .btn-4:after {
+        background: #fff;
+        content: "";
+        height: 155px;
+        left: -75px;
+        opacity: 0.2;
+        position: absolute;
+        top: -50px;
+        transform: rotate(35deg);
+        transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+        width: 50px;
+        z-index: -10;
+    }
+
+    .btn-4:hover:after {
+        left: 120%;
+        transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    .btn {
+        display: flex;
+        flex-direction: row;
+        border: 2px solid #EBF29D;
+        border-radius: 24px;
+        height: 2.5rem;
+        width: 6rem;
+        justify-items: center;
+        text-align: center;
+        align-items: center;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .btn1 {
+        display: flex;
+        flex-direction: row;
+        border-radius: 24px;
+        height: 2.5rem;
+        width: 6rem;
+        justify-items: center;
+        text-align: center;
+        align-items: center;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        background-color: #F97247;
+    }
 }
-
-

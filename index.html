@@ -1,63 +1,40 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE HTML>
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>Document</title>
     <link href="https://fonts.cdnfonts.com/css/lexend" rel="stylesheet">
-    <link rel="stylesheet" href="index1920.css">
-    <link rel="stylesheet" href="index1280.css">
-    <script src="index.js"></script>
+    <link rel="stylesheet" href="./stylesheets/index1920.css">
+    <link rel="stylesheet" href="./stylesheets/index1280.css">
+    <link rel="stylesheet" href="./stylesheets/index720.css">
+    <script type="module" src="./scripts/index.js"></script>
+<!--    <script src="scripts/blub.js"></script>-->
+<!--    <script src="./scripts/coins.js"></script>-->
 </head>
-<body onload="makeBlubs(10)">
-
-
+<body onload="bodyLoading()">
 <div class="main">
     <div class="blur">
         <div class="header">
             <div class="logo"></div>
-            <div class="menu">
-                <span>About us</span>
-                <span>Grand</span>
-                <span>Commissions</span>
-                <span>Blub</span>
-                <span>Contact us</span>
-                <span>Careers</span>
+            <div class="menu" id="menu">
+                <span><a href="#">About us</a></span>
+                <span><a href="#">Grand</a></span>
+                <span><a href="#">Commissions</a></span>
+                <span><a href="#">Blub</a></span>
+                <span><a href="#">Contact us</a></span>
+                <span><a href="#">Careers</a></span>
             </div>
-            <div class="buttons">
-                <div class="lang_button">
-                    <div class="lang_icon">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_19052_250)">
-                                <path d="M14.1692 3.71888C12.7989 1.84023 11.0012 0.775068 8.6355 0.5C9.74223 1.7817 10.5035 3.16875 10.9895 4.71966C12.0962 4.49141 13.1444 4.19294 14.1692 3.71888Z"
-                                      fill="#EBF29D"/>
-                                <path d="M4.25006 5.52288C3.83001 5.41303 3.42197 5.30631 3.01989 5.18202C2.66058 5.06606 2.30606 4.93336 1.95173 4.80073C1.7517 4.72586 1.55173 4.65102 1.35101 4.57922C0.162292 6.66856 0.273551 9.63579 1.34515 11.3857C1.94399 11.1975 2.53794 11.0093 3.13731 10.8194L3.1384 10.8191C3.67559 10.6489 4.21745 10.4772 4.77076 10.303C4.45455 8.78132 4.4604 7.21285 4.77661 5.66193C4.59874 5.61407 4.42337 5.5682 4.25006 5.52288Z"
-                                      fill="#EBF29D"/>
-                                <path d="M12.9458 5.15847C12.3749 5.33989 11.8035 5.52147 11.2297 5.70289C11.5459 7.23625 11.5342 8.79301 11.2297 10.2971C12.3891 10.6658 13.5193 11.0228 14.6612 11.3798C15.7855 9.45435 15.7737 6.52809 14.6612 4.61432C14.0874 4.7957 13.5166 4.97709 12.9458 5.15847Z"
-                                      fill="#EBF29D"/>
-                                <path d="M5.7194 10.2269C5.39148 8.74034 5.40319 7.28307 5.70183 5.82579C5.94061 5.83983 6.17518 5.8565 6.40679 5.87296C6.9476 5.91139 7.47255 5.94869 7.99728 5.94869C8.52199 5.94869 9.0467 5.91141 9.58748 5.87298C9.81907 5.85652 10.054 5.83983 10.2927 5.82579C10.6148 7.25966 10.6031 8.72864 10.2869 10.221C8.75267 10.022 7.2536 10.0103 5.7194 10.2269Z"
-                                      fill="#EBF29D"/>
-                                <path d="M14.1693 12.2753C12.8107 14.1539 11.0072 15.2132 8.64145 15.5C9.73062 14.2242 10.5094 12.843 10.9837 11.2862C12.0846 11.4969 13.1269 11.8129 14.1693 12.2753Z"
-                                      fill="#EBF29D"/>
-                                <path d="M7.35894 0.5C4.99322 0.780921 3.18965 1.84608 1.78428 3.78326C2.88515 4.12271 3.92162 4.44459 4.99322 4.77819C5.49096 3.15704 6.26391 1.7817 7.35894 0.5Z"
-                                      fill="#EBF29D"/>
-                                <path d="M7.35894 15.5C4.99907 15.2191 3.20136 14.1598 1.78428 12.2167C2.13525 12.1085 2.47968 12.0021 2.82079 11.8967L2.82228 11.8962C3.55057 11.6711 4.26377 11.4508 4.99322 11.2277C5.49096 12.8312 6.2522 14.2183 7.35894 15.5Z"
-                                      fill="#EBF29D"/>
-                                <path d="M10.0408 4.86013C9.60158 3.48479 8.92817 2.28503 7.99711 1.19646C7.06019 2.30258 6.38093 3.4965 5.95931 4.86013C7.33541 5.04156 8.67052 5.04741 10.0408 4.86013Z"
-                                      fill="#EBF29D"/>
-                                <path d="M8.00297 14.8035C7.07191 13.7208 6.39849 12.521 5.95931 11.1457C7.3237 10.9526 8.65881 10.9584 10.0466 11.1399C9.60744 12.5093 8.93403 13.7033 8.00297 14.8035Z"
-                                      fill="#EBF29D"/>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_19052_250">
-                                    <rect width="16" height="16" fill="white"/>
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </div>
-                    <span class="lang_value">RU</span>
-                </div>
-                <div class="login_button">LOG IN</div>
-                <div class="signup_button">SIGN UP</div>
+            <div class="buttons" id="buttons">
+                <a href="#" class="btn btn-4">
+                    <img src="public/lang_button.svg" alt="">
+                    <span class="lang_value" id="lang_value">RU</span>
+                </a>
+                <a href="#" class="btn btn-4" id="sign_in_button">
+                    SIGN IN
+                </a>
+                <a href="#" class="btn1 btn-4" id="sign_up_button">
+                    SIGN UP
+                </a>
             </div>
         </div>
         <div class="content">
@@ -67,124 +44,127 @@
                 </div>
                 <div class="sometext">Maybe You Maybe Me.</div>
                 <div>
-                    <div class="partner_button" onclick="makeBlub()">PARTNER</div>
+                    <a href="#">
+                        <div class="partner_button" onclick="makeBlub()">PARTNER</div>
+                    </a>
                 </div>
             </div>
             <div class="middle_section">
-                <div class="coins">
+                <div class="coins" id="coins">
                     <div class="coins1" id="coins1">
                         <div class="movingObject" id="object1">
-                            <img src="coins/coin5.svg">
+                            <img src="public/coins/coin5.svg">
                         </div>
                         <div class="movingObject" id="object2">
-                            <img src="coins/coin8.svg">
+                            <img src="public/coins/coin8.svg">
                         </div>
                         <div class="movingObject" id="object3">
-                            <img src="coins/coin7.svg">
+                            <img src="public/coins/coin7.svg">
                         </div>
                         <div class="movingObject" id="object4">
-                            <img src="coins/coin6.svg">
+                            <img src="public/coins/coin6.svg">
                         </div>
                         <div class="movingObject" id="object5">
-                            <img src="coins/coin5.svg">
+                            <img src="public/coins/coin5.svg">
                         </div>
                         <div class="movingObject" id="object6">
-                            <img src="coins/coin8.svg">
+                            <img src="public/coins/coin8.svg">
                         </div>
                         <div class="movingObject" id="object7">
-                            <img src="coins/coin7.svg">
+                            <img src="public/coins/coin7.svg">
                         </div>
                         <div class="movingObject" id="object8">
-                            <img src="coins/coin6.svg">
+                            <img src="public/coins/coin6.svg">
                         </div>
                     </div>
                     <div class="coins2" id="coins2">
                         <div class="movingObject" id="object9">
-                            <img style="visibility: hidden" src="coins/coin3.svg">
+                            <img style="visibility: hidden" src="public/coins/coin3.svg">
                         </div>
                         <div class="movingObject" id="object10">
-                            <img src="coins/coin4.svg">
+                            <img src="public/coins/coin4.svg">
                         </div>
                         <div class="movingObject" id="object11">
-                            <img src="coins/coin1.svg">
+                            <img src="public/coins/coin1.svg">
                         </div>
                         <div class="movingObject" id="object12">
-                            <img src="coins/coin2.svg">
+                            <img src="public/coins/coin2.svg">
                         </div>
                         <div class="movingObject" id="object13">
-                            <img src="coins/coin3.svg">
+                            <img src="public/coins/coin3.svg">
                         </div>
                         <div class="movingObject" id="object14">
-                            <img src="coins/coin4.svg">
+                            <img src="public/coins/coin4.svg">
                         </div>
                         <div class="movingObject" id="object15">
-                            <img src="coins/coin1.svg">
+                            <img src="public/coins/coin1.svg">
                         </div>
                         <div class="movingObject" id="object16">
-                            <img src="coins/coin2.svg">
+                            <img src="public/coins/coin2.svg">
                         </div>
                     </div>
                     <div class="coins3" id="coins3">
                         <div class="movingObject" id="object17">
-                            <img src="coins/coin3.svg">
+                            <img src="public/coins/coin3.svg">
                         </div>
                         <div class="movingObject" id="object18">
-                            <img src="coins/coin11.svg">
+                            <img src="public/coins/coin11.svg">
                         </div>
                         <div class="movingObject" id="object19">
-                            <img src="coins/coin5.svg">
+                            <img src="public/coins/coin5.svg">
                         </div>
                         <div class="movingObject" id="object20">
-                            <img src="coins/coin10.svg">
+                            <img src="public/coins/coin10.svg">
                         </div>
                         <div class="movingObject" id="object21">
-                            <img src="coins/coin3.svg">
+                            <img src="public/coins/coin3.svg">
                         </div>
                         <div class="movingObject" id="object22">
-                            <img src="coins/coin11.svg">
+                            <img src="public/coins/coin11.svg">
                         </div>
                         <div class="movingObject" id="object23">
-                            <img src="coins/coin5.svg">
+                            <img src="public/coins/coin5.svg">
                         </div>
                         <div class="movingObject" id="object24">
-                            <img src="coins/coin10.svg">
+                            <img src="public/coins/coin10.svg">
                         </div>
                         <div class="movingObject" id="object25">
-                            <img src="coins/coin3.svg">
+                            <img src="public/coins/coin3.svg">
                         </div>
                         <div class="movingObject" id="object26">
-                            <img src="coins/coin11.svg">
+                            <img src="public/coins/coin11.svg">
                         </div>
                         <div class="movingObject" id="object27">
-                            <img src="coins/coin5.svg">
+                            <img src="public/coins/coin5.svg">
                         </div>
                     </div>
                 </div>
 
-                </div>
-                <div class="right_section">
-                    <div class="blub_section">
-                        BLUB
-                        <div class="blub_window">
-                            <div class="blub_element_first">
-                                <div class="blub_text">Payment methods: Skrill, Neteller, webmoney, Bank transfer</div>
-                                <div class="blub_date">27.5.2024</div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
             </div>
-            <div class="footer-container">
-                <div class="info_pages">
-                    <span style="color: #F97247"><u>Terms & Conditions</u></span>
-                    <span>Cookies</span>
-                    <span>Contacts</span>
+            <div class="right_section">
+                <div class="blub_section">
+                    BLUB
+                    <div class="blub_window">
+                        <div class="blub_element_first">
+                            <div class="blub_text">Payment methods: Skrill, Neteller, webmoney, Bank transfer</div>
+                            <div class="blub_date">27.5.2024</div>
+                        </div>
+
+                    </div>
                 </div>
-                <div class="social_media_area">
-                    <div class="oursocialmedia">Our social media:</div>
-                    <div class="twitter_icon">
+
+            </div>
+        </div>
+        <div class="footer-container">
+            <div class="info_pages">
+                <span><a href="#" style="color: #F97247"><u>Terms & Conditions</u></a></span>
+                <span><a href="#">Cookies</a></span>
+                <span><a href="#">Contacts</a></span>
+            </div>
+            <div class="social_media_area">
+                <div class="oursocialmedia">Our social media:</div>
+                <div class="twitter_icon">
+                    <a href="#">
                         <svg onmouseover="makeBrightly(this)" onmouseout="makeDarker(this)" width="32" height="32"
                              viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_19052_152)">
@@ -200,9 +180,10 @@
                                 </clipPath>
                             </defs>
                         </svg>
-
-                    </div>
-                    <div class="linkedin_icon">
+                    </a>
+                </div>
+                <div class="linkedin_icon">
+                    <a href="#">
                         <svg onmouseover="makeBrightly(this)" onmouseout="makeDarker(this)" width="32" height="32"
                              viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_19178_167)">
@@ -218,9 +199,10 @@
                                 </clipPath>
                             </defs>
                         </svg>
-
-                    </div>
-                    <div class="youtube_icon">
+                    </a>
+                </div>
+                <div class="youtube_icon">
+                    <a href="#">
                         <svg onmouseover="makeBrightly(this)" onmouseout="makeDarker(this)" width="32" height="32"
                              viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_19178_179)">
@@ -241,9 +223,10 @@
                                 </clipPath>
                             </defs>
                         </svg>
-
-                    </div>
-                    <div class="tiktok_icon">
+                    </a>
+                </div>
+                <div class="tiktok_icon">
+                    <a href="#">
                         <svg onmouseover="makeBrightly(this)" onmouseout="makeDarker(this)" width="32" height="32"
                              viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_19178_191)">
@@ -260,9 +243,10 @@
                                 </clipPath>
                             </defs>
                         </svg>
-
-                    </div>
-                    <div class="telegram_icon">
+                    </a>
+                </div>
+                <div class="telegram_icon">
+                    <a href="#">
                         <svg onmouseover="makeBrightly(this)" onmouseout="makeDarker(this)" width="32" height="32"
                              viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_19178_204)">
@@ -278,9 +262,11 @@
                                 </clipPath>
                             </defs>
                         </svg>
+                    </a>
 
-                    </div>
-                    <div class="vk_icon">
+                </div>
+                <div class="vk_icon">
+                    <a href="https://vk.com/bozhenkomax">
                         <svg onmouseover="makeBrightly(this)" onmouseout="makeDarker(this)" width="32" height="32"
                              viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_19178_216)">
@@ -299,145 +285,145 @@
                                 </clipPath>
                             </defs>
                         </svg>
-
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 
-    <script>
-        const container = document.getElementById('coins1');
-        const objects = [
-            document.getElementById('object1'),
-            document.getElementById('object2'),
-            document.getElementById('object3'),
-            document.getElementById('object4'),
-            document.getElementById('object5'),
-            document.getElementById('object6'),
-            document.getElementById('object7'),
-            document.getElementById('object8')
-        ];
+</div>
 
-        const speed = 1; // скорость движения
-        const containerHeight = container.clientHeight;
-        const objectHeight = objects[0].clientHeight;
-        const initialOffsets = [0, 115, 350, 470, 590, 710, 945, 1065]; // начальные отступы объектов
+<script>
+    const container = document.getElementById('coins1');
+    const objects = [
+        document.getElementById('object1'),
+        document.getElementById('object2'),
+        document.getElementById('object3'),
+        document.getElementById('object4'),
+        document.getElementById('object5'),
+        document.getElementById('object6'),
+        document.getElementById('object7'),
+        document.getElementById('object8')
+    ];
 
-        // Расчет начальных позиций объектов
-        for (let i = 0; i < objects.length; i++) {
-            initialOffsets.push(-i * (objectHeight + 10));
-        }
+    const speed = 1; // скорость движения
+    const containerHeight = container.clientHeight;
+    const objectHeight = objects[0].clientHeight;
+    const initialOffsets = [0, 115, 350, 470, 590, 710, 945, 1065]; // начальные отступы объектов
 
-        objects.forEach((object, index) => {
-            object.style.top = initialOffsets[index] + 'px';
+    // Расчет начальных позиций объектов
+    for (let i = 0; i < objects.length; i++) {
+        initialOffsets.push(-i * (objectHeight + 10));
+    }
+
+    objects.forEach((object, index) => {
+        object.style.top = initialOffsets[index] + 'px';
+    });
+
+
+
+
+    setInterval(function () {
+        objects.forEach(object => {
+            let currentPos = parseFloat(object.style.top);
+            currentPos += speed;
+
+            if (currentPos > containerHeight) {
+                currentPos = -objectHeight;
+            }
+
+            object.style.top = currentPos + 'px';
         });
+    }, 20); // каждые 20 миллисекунд обновляем позицию
+</script>
+<script>
+    const container2 = document.getElementById('coins2');
+    const objects2 = [
+        document.getElementById('object9'),
+        document.getElementById('object10'),
+        document.getElementById('object11'),
+        document.getElementById('object12'),
+        document.getElementById('object13'),
+        document.getElementById('object14'),
+        document.getElementById('object15'),
+        document.getElementById('object16')
+    ];
 
-        function moveObjects() {
-            objects.forEach(object => {
-                let currentPos = parseFloat(object.style.top);
-                currentPos += speed;
+    const speed2 = 2; // скорость движения
+    const containerHeight2 = container2.clientHeight;
+    const objectHeight2 = 0
+    const initialOffsets2 = [0, 115, 350, 470, 590, 710, 945, 1065] // начальные отступы объектов
 
-                if (currentPos > containerHeight) {
-                    currentPos = -objectHeight;
-                }
+    // Расчет начальных позиций объектов
+    for (let i = 0; i < objects2.length; i++) {
+        initialOffsets2.push(-i * (objectHeight2 + 10));
+    }
 
-                object.style.top = currentPos + 'px';
-            });
-        }
+    objects2.forEach((object, index) => {
+        object.style.top = initialOffsets2[index] + 'px';
+    });
 
 
-        setInterval(moveObjects, 20); // каждые 20 миллисекунд обновляем позицию
-    </script>
-    <script>
-        const container2 = document.getElementById('coins2');
-        const objects2 = [
-            document.getElementById('object9'),
-            document.getElementById('object10'),
-            document.getElementById('object11'),
-            document.getElementById('object12'),
-            document.getElementById('object13'),
-            document.getElementById('object14'),
-            document.getElementById('object15'),
-            document.getElementById('object16')
-        ];
 
-        const speed2 = 2; // скорость движения
-        const containerHeight2 = container2.clientHeight;
-        const objectHeight2 = 0
-        const initialOffsets2 = [0, 115, 350, 470, 590, 710, 945, 1065] // начальные отступы объектов
 
-        // Расчет начальных позиций объектов
-        for (let i = 0; i < objects2.length; i++) {
-            initialOffsets2.push(-i * (objectHeight2 + 10));
-        }
+    setInterval(function () {
+        objects2.forEach(object => {
+            let currentPos = parseFloat(object.style.top);
+            currentPos -= speed2;
+            if (currentPos < objectHeight2) {
+                currentPos = containerHeight2;
+            }
 
-        objects2.forEach((object, index) => {
-            object.style.top = initialOffsets2[index] + 'px';
+            object.style.top = currentPos + 'px';
         });
+    }, 20); // каждые 20 миллисекунд обновляем позицию
+</script>
+<script>
+    const container3 = document.getElementById('coins3');
+    const objects3 = [
+        document.getElementById('object17'),
+        document.getElementById('object18'),
+        document.getElementById('object19'),
+        document.getElementById('object20'),
+        document.getElementById('object21'),
+        document.getElementById('object22'),
+        document.getElementById('object23'),
+        document.getElementById('object24'),
+        document.getElementById('object25'),
+        document.getElementById('object26'),
+        document.getElementById('object27')
+    ];
 
-        function moveObjects2() {
-            objects2.forEach(object => {
-                let currentPos = parseFloat(object.style.top);
-                currentPos -= speed2;
-                if(object.id==="object9")console.log(objectHeight2)
-                if (currentPos < objectHeight2) {
-                    currentPos = containerHeight2;
-                }
+    const speed3 = 0.3; // скорость движения
+    const containerHeight3 = container3.clientHeight;
+    const objectHeight3 = objects3[0].clientHeight;
+    const initialOffsets3 = [0, 120, 240, 360, 480, 600, 720, 840, 960, 1080]; // начальные отступы объектов
 
-                object.style.top = currentPos + 'px';
-            });
-        }
+    // Расчет начальных позиций объектов
+    for (let i = 0; i < objects3.length; i++) {
+        initialOffsets3.push(-i * (objectHeight + 10));
+    }
+
+    objects3.forEach((object, index) => {
+        object.style.top = initialOffsets3[index] + 'px';
+    });
 
 
-        setInterval(moveObjects2, 20); // каждые 20 миллисекунд обновляем позицию
-    </script>
-    <script>
-        const container3 = document.getElementById('coins3');
-        const objects3 = [
-            document.getElementById('object17'),
-            document.getElementById('object18'),
-            document.getElementById('object19'),
-            document.getElementById('object20'),
-            document.getElementById('object21'),
-            document.getElementById('object22'),
-            document.getElementById('object23'),
-            document.getElementById('object24'),
-            document.getElementById('object25'),
-            document.getElementById('object26'),
-            document.getElementById('object27')
-        ];
 
-        const speed3 = 0.3; // скорость движения
-        const containerHeight3 = container3.clientHeight;
-        const objectHeight3 = objects3[0].clientHeight;
-        const initialOffsets3 = [0, 120, 240, 360, 480, 600, 720, 840, 960, 1080]; // начальные отступы объектов
 
-        // Расчет начальных позиций объектов
-        for (let i = 0; i < objects3.length; i++) {
-            initialOffsets3.push(-i * (objectHeight + 10));
-        }
+    setInterval(function () {
+        objects3.forEach(object => {
+            let currentPos = parseFloat(object.style.top);
+            currentPos += speed3;
 
-        objects3.forEach((object, index) => {
-            object.style.top = initialOffsets3[index] + 'px';
+            if (currentPos > containerHeight3) {
+                currentPos = -objectHeight3;
+            }
+
+            object.style.top = currentPos + 'px';
         });
-
-        function moveObjects3() {
-            objects3.forEach(object => {
-                let currentPos = parseFloat(object.style.top);
-                currentPos += speed3;
-
-                if (currentPos > containerHeight3) {
-                    currentPos = -objectHeight3;
-                }
-
-                object.style.top = currentPos + 'px';
-            });
-        }
-
-
-        setInterval(moveObjects3, 20); // каждые 20 миллисекунд обновляем позицию
-    </script>
+    }, 20); // каждые 20 миллисекунд обновляем позицию
+</script>
 
 </body>
 </html>

@@ -12,7 +12,7 @@
 <!--    <script src="./scripts/coins.js"></script>-->
 </head>
 <body onload="bodyLoading()">
-<div class="main">
+<div class="main" id="main">
     <div class="blur">
         <div class="header">
             <div class="logo"></div>
@@ -292,138 +292,6 @@
     </div>
 
 </div>
-
-<script>
-    const container = document.getElementById('coins1');
-    const objects = [
-        document.getElementById('object1'),
-        document.getElementById('object2'),
-        document.getElementById('object3'),
-        document.getElementById('object4'),
-        document.getElementById('object5'),
-        document.getElementById('object6'),
-        document.getElementById('object7'),
-        document.getElementById('object8')
-    ];
-
-    const speed = 1; // скорость движения
-    const containerHeight = container.clientHeight;
-    const objectHeight = objects[0].clientHeight;
-    const initialOffsets = [0, 115, 350, 470, 590, 710, 945, 1065]; // начальные отступы объектов
-
-    // Расчет начальных позиций объектов
-    for (let i = 0; i < objects.length; i++) {
-        initialOffsets.push(-i * (objectHeight + 10));
-    }
-
-    objects.forEach((object, index) => {
-        object.style.top = initialOffsets[index] + 'px';
-    });
-
-
-
-
-    setInterval(function () {
-        objects.forEach(object => {
-            let currentPos = parseFloat(object.style.top);
-            currentPos += speed;
-
-            if (currentPos > containerHeight) {
-                currentPos = -objectHeight;
-            }
-
-            object.style.top = currentPos + 'px';
-        });
-    }, 20); // каждые 20 миллисекунд обновляем позицию
-</script>
-<script>
-    const container2 = document.getElementById('coins2');
-    const objects2 = [
-        document.getElementById('object9'),
-        document.getElementById('object10'),
-        document.getElementById('object11'),
-        document.getElementById('object12'),
-        document.getElementById('object13'),
-        document.getElementById('object14'),
-        document.getElementById('object15'),
-        document.getElementById('object16')
-    ];
-
-    const speed2 = 2; // скорость движения
-    const containerHeight2 = container2.clientHeight;
-    const objectHeight2 = 0
-    const initialOffsets2 = [0, 115, 350, 470, 590, 710, 945, 1065] // начальные отступы объектов
-
-    // Расчет начальных позиций объектов
-    for (let i = 0; i < objects2.length; i++) {
-        initialOffsets2.push(-i * (objectHeight2 + 10));
-    }
-
-    objects2.forEach((object, index) => {
-        object.style.top = initialOffsets2[index] + 'px';
-    });
-
-
-
-
-    setInterval(function () {
-        objects2.forEach(object => {
-            let currentPos = parseFloat(object.style.top);
-            currentPos -= speed2;
-            if (currentPos < objectHeight2) {
-                currentPos = containerHeight2;
-            }
-
-            object.style.top = currentPos + 'px';
-        });
-    }, 20); // каждые 20 миллисекунд обновляем позицию
-</script>
-<script>
-    const container3 = document.getElementById('coins3');
-    const objects3 = [
-        document.getElementById('object17'),
-        document.getElementById('object18'),
-        document.getElementById('object19'),
-        document.getElementById('object20'),
-        document.getElementById('object21'),
-        document.getElementById('object22'),
-        document.getElementById('object23'),
-        document.getElementById('object24'),
-        document.getElementById('object25'),
-        document.getElementById('object26'),
-        document.getElementById('object27')
-    ];
-
-    const speed3 = 0.3; // скорость движения
-    const containerHeight3 = container3.clientHeight;
-    const objectHeight3 = objects3[0].clientHeight;
-    const initialOffsets3 = [0, 120, 240, 360, 480, 600, 720, 840, 960, 1080]; // начальные отступы объектов
-
-    // Расчет начальных позиций объектов
-    for (let i = 0; i < objects3.length; i++) {
-        initialOffsets3.push(-i * (objectHeight + 10));
-    }
-
-    objects3.forEach((object, index) => {
-        object.style.top = initialOffsets3[index] + 'px';
-    });
-
-
-
-
-    setInterval(function () {
-        objects3.forEach(object => {
-            let currentPos = parseFloat(object.style.top);
-            currentPos += speed3;
-
-            if (currentPos > containerHeight3) {
-                currentPos = -objectHeight3;
-            }
-
-            object.style.top = currentPos + 'px';
-        });
-    }, 20); // каждые 20 миллисекунд обновляем позицию
-</script>
-
+<script src="scripts/coins.js"></script>
 </body>
 </html>

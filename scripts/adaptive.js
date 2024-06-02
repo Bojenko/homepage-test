@@ -6,4 +6,12 @@ export const orientation = () => {
     else return "landscape";
 }
 
+export var desktop = orientation() !=='portrait';
 
+
+class Adaptive {
+    constructor() {
+        this.main = document.getElementById('main');
+    }
+
+}

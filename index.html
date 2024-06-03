@@ -14,7 +14,7 @@
 <body onload="bodyLoading()">
 <div class="main" id="main">
     <div class="blur">
-        <div class="header">
+        <div class="header" id="header">
             <div class="logo"></div>
             <div class="menu" id="menu">
                 <span><a href="#">About us</a></span>
@@ -26,18 +26,18 @@
             </div>
             <div class="buttons" id="buttons">
                 <a href="#" class="btn btn-4">
-                    <img src="public/lang_button.svg" alt="">
+                    <img id="lang_icon" src="public/lang_button.svg" alt="">
                     <span class="lang_value" id="lang_value">RU</span>
                 </a>
                 <a href="#" class="btn btn-4" id="sign_in_button">
-                    SIGN IN
+                    LOG IN
                 </a>
                 <a href="#" class="btn1 btn-4" id="sign_up_button">
                     SIGN UP
                 </a>
             </div>
         </div>
-        <div class="content">
+        <div class="content" id="content">
             <div class="left_section">
                 <div class="left_title">Lorem IPSU <br>
                     <div style="color: #F97247">OPEN</div>
@@ -215,7 +215,7 @@
                             <defs>
                                 <linearGradient id="paint0_linear_19178_179" x1="32" y1="-1.90735e-06" x2="-5.64706"
                                                 y2="9.41176" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#F99247"/>
+                                    <stop offset="1" stop-color="#F99247"/>
                                     <stop offset="1" stop-color="#F29DA2"/>
                                 </linearGradient>
                                 <clipPath id="clip0_19178_179">
@@ -292,6 +292,7 @@
     </div>
 
 </div>
-<script src="scripts/coins.js"></script>
+<!--<script type="module" src="scripts/coins.js"></script>-->
+<script type="module" src="scripts/adaptive.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-class VerticalLine {
+export class VerticalLine {
     constructor(container, objects, speed, initialOffsets, movingByDefault = true) {
 
         this.container = container;
@@ -71,7 +71,7 @@ class VerticalLine {
     }
 }
 
-const line1 = new VerticalLine(
+export const line1 = new VerticalLine(
     document.getElementById('coins1'),
     [
         document.getElementById('object1'),
@@ -87,7 +87,7 @@ const line1 = new VerticalLine(
     [0, 115, 350, 470, 590, 710, 945, 1065]
 )
 
-const line2 = new VerticalLine(
+export const line2 = new VerticalLine(
     document.getElementById('coins2'),
     [
         document.getElementById('object9'),
@@ -103,7 +103,7 @@ const line2 = new VerticalLine(
     [0, 115, 350, 470, 590, 710, 945, 1065]
 )
 
-const line3 = new VerticalLine(
+export const line3 = new VerticalLine(
     document.getElementById('coins3'),
     [
         document.getElementById('object17'),

@@ -1,5 +1,5 @@
 import {makeBlubs, makeBlub} from "./blub.js";
-//import {desktop} from "./adaptive";
+import {_interface, desktop, orientation} from "./adaptive.js";
 
 function makeBrightly(element) {
     const g = element.childNodes;
@@ -16,6 +16,7 @@ function makeDarker(element) {
     path[1].setAttribute('fill', "#F97247")
 
 }
+
 // function buttonActive(button) {
 //     button.style.backgroundColor = "rgba(25, 29, 10, 0.54)";
 // }
@@ -26,9 +27,8 @@ function makeDarker(element) {
 
 window.bodyLoading = () => {
     makeBlubs(10);
-    // const o = orientation();
-    // if (o === "portrait") makeMobile();
-    // else makeDesktop();
+    orientation();
+    if (!desktop) _interface.toMobile();
 }
 window.makeBlub = makeBlub;
 window.makeBrightly = makeBrightly;

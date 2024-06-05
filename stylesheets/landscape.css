@@ -1,4 +1,4 @@
-@media all and (orientation: landscape) {
+@media all and (orientation: landscape) and (max-width: 1000px) {
 
     html {
         background-color: #191D0A;
@@ -176,6 +176,7 @@
     }
 
     .header {
+        font-size: 0.8rem;
         display: grid;
         justify-content: space-evenly;
         align-items: center;

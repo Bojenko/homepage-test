@@ -19,13 +19,13 @@
                 <span><a href="#">About us</a></span>
                 <span><a href="#">Grand</a></span>
                 <span><a href="#">Commissions</a></span>
-                <span><a href="#">Blub</a></span>
+                <span><a>Blub</a></span>
                 <span><a href="#">Contact us</a></span>
                 <span><a href="#">Careers</a></span>
             </div>
             <div class="buttons" id="buttons">
-                <a href="#" class="btn btn-4">
-                    <img id="lang_icon" src="public/lang_button.svg" alt="">
+                <a href="#" class="btn btn-4" onclick="changeLang(this)">
+                    <img id="lang_icon" src="public/lang_button.svg" alt="lang">
                     <span class="lang_value" id="lang_value">RU</span>
                 </a>
                 <a href="#" class="btn btn-4" id="sign_in_button">
@@ -44,7 +44,9 @@
                 <div class="sometext">Maybe You Maybe Me.</div>
                 <div class="partner_button_div">
                     <a href="#" class="partner_button_a">
-                        <div class="partner_button" onclick="makeBlub()">PARTNER</div>
+                        <div class="partner_button" onclick="alert(window.screen.width +'x'+window.screen.height)">
+                            PARTNER
+                        </div>
                     </a>
                 </div>
             </div>
@@ -52,89 +54,107 @@
                 <div class="coins" id="coins">
                     <div class="coins1" id="coins1">
                         <div class="movingObject" id="object1">
-                            <img src="public/coins/coin5.svg">
+                            <img src="public/coins/coin5.svg" alt="coin">
                         </div>
                         <div class="movingObject" id="object2">
-                            <img src="public/coins/coin8.svg">
+                            <img src="public/coins/coin8.svg" alt="coin">
                         </div>
                         <div class="movingObject" id="object3">
-                            <img src="public/coins/coin7.svg">
+                            <img src="public/coins/coin7.svg" alt="coin">
                         </div>
                         <div class="movingObject" id="object4">
-                            <img src="public/coins/coin6.svg">
+                            <img src="public/coins/coin6.svg" alt="coin">
                         </div>
                         <div class="movingObject" id="object5">
-                            <img src="public/coins/coin5.svg">
+                            <img src="public/coins/coin5.svg" alt="coin">
                         </div>
                         <div class="movingObject" id="object6">
-                            <img src="public/coins/coin8.svg">
+                            <img src="public/coins/coin8.svg" alt="coin">
                         </div>
                         <div class="movingObject" id="object7">
-                            <img src="public/coins/coin7.svg">
+                            <img src="public/coins/coin7.svg" alt="coin">
                         </div>
                         <div class="movingObject" id="object8">
-                            <img src="public/coins/coin6.svg">
+                            <img src="public/coins/coin6.svg" alt="coin">
+                        </div>
+                        <div class="movingObject" id="object9">
+                            <img src="public/coins/coin5.svg" alt="coin">
+                        </div>
+                        <div class="movingObject" id="object10">
+                            <img src="public/coins/coin7.svg" alt="coin">
                         </div>
                     </div>
                     <div class="coins2" id="coins2">
-                        <div class="movingObject" id="object9">
-                            <img style="visibility: hidden" src="public/coins/coin3.svg">
-                        </div>
-                        <div class="movingObject" id="object10">
-                            <img src="public/coins/coin4.svg">
-                        </div>
                         <div class="movingObject" id="object11">
-                            <img src="public/coins/coin1.svg">
+                            <img style="visibility: hidden" src="public/coins/coin3.svg" alt="coin">
                         </div>
                         <div class="movingObject" id="object12">
-                            <img src="public/coins/coin2.svg">
+                            <img src="public/coins/coin4.svg" alt="coin">
                         </div>
                         <div class="movingObject" id="object13">
-                            <img src="public/coins/coin3.svg">
+                            <img src="public/coins/coin1.svg" alt="coin">
                         </div>
                         <div class="movingObject" id="object14">
-                            <img src="public/coins/coin4.svg">
+                            <img src="public/coins/coin2.svg" alt="coin">
                         </div>
                         <div class="movingObject" id="object15">
-                            <img src="public/coins/coin1.svg">
+                            <img src="public/coins/coin3.svg" alt="coin">
                         </div>
                         <div class="movingObject" id="object16">
-                            <img src="public/coins/coin2.svg">
+                            <img src="public/coins/coin4.svg" alt="coin">
+                        </div>
+                        <div class="movingObject" id="object17">
+                            <img src="public/coins/coin1.svg" alt="coin">
+                        </div>
+                        <div class="movingObject" id="object18">
+                            <img src="public/coins/coin2.svg" alt="coin">
+                        </div>
+                        <div class="movingObject" id="object19">
+                            <img src="public/coins/coin3.svg" alt="coin">
+                        </div>
+                        <div class="movingObject" id="object20">
+                            <img src="public/coins/coin1.svg" alt="coin">
                         </div>
                     </div>
                     <div class="coins3" id="coins3">
-                        <div class="movingObject" id="object17">
-                            <img src="public/coins/coin3.svg">
-                        </div>
-                        <div class="movingObject" id="object18">
-                            <img src="public/coins/coin11.svg">
-                        </div>
-                        <div class="movingObject" id="object19">
-                            <img src="public/coins/coin5.svg">
-                        </div>
-                        <div class="movingObject" id="object20">
-                            <img src="public/coins/coin10.svg">
-                        </div>
                         <div class="movingObject" id="object21">
-                            <img src="public/coins/coin3.svg">
+                            <img src="public/coins/coin3.svg" alt="coin">
                         </div>
                         <div class="movingObject" id="object22">
-                            <img src="public/coins/coin11.svg">
+                            <img src="public/coins/coin11.svg" alt="coin">
                         </div>
                         <div class="movingObject" id="object23">
-                            <img src="public/coins/coin5.svg">
+                            <img src="public/coins/coin5.svg" alt="coin">
                         </div>
                         <div class="movingObject" id="object24">
-                            <img src="public/coins/coin10.svg">
+                            <img src="public/coins/coin10.svg" alt="coin">
                         </div>
                         <div class="movingObject" id="object25">
-                            <img src="public/coins/coin3.svg">
+                            <img src="public/coins/coin3.svg" alt="coin">
                         </div>
                         <div class="movingObject" id="object26">
-                            <img src="public/coins/coin11.svg">
+                            <img src="public/coins/coin11.svg" alt="coin">
                         </div>
                         <div class="movingObject" id="object27">
-                            <img src="public/coins/coin5.svg">
+                            <img src="public/coins/coin5.svg" alt="coin">
+                        </div>
+                        <div class="movingObject" id="object28">
+                            <img src="public/coins/coin10.svg" alt="coin">
+                        </div>
+                        <div class="movingObject" id="object29">
+                            <img src="public/coins/coin3.svg" alt="coin">
+                        </div>
+                        <div class="movingObject" id="object30">
+                            <img src="public/coins/coin11.svg" alt="coin">
+                        </div>
+                        <div class="movingObject" id="object31">
+                            <img src="public/coins/coin5.svg" alt="coin">
+                        </div>
+                        <div class="movingObject" id="object32">
+                            <img src="public/coins/coin11.svg" alt="coin">
+                        </div>
+                        <div class="movingObject" id="object33">
+                            <img src="public/coins/coin5.svg" alt="coin">
                         </div>
                     </div>
                 </div>
@@ -145,10 +165,10 @@
                     BLUB
                     <div class="blub_window">
                         <div class="blub_element_first">
-                            <div class="blub_text">Payment methods: Skrill, Neteller, webmoney, Bank transfer</div>
-                            <div class="blub_date">27.5.2024</div>
+                            <div class="blub_text"><a href="https://habr.com/ru/news/819591/">Российские учёные получили
+                                100 млн рублей на разработку устойчивых к радиации солнечных панелей</a></div>
+                            <div class="blub_date">06.05.2024</div>
                         </div>
-
                     </div>
                 </div>
 

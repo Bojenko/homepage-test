@@ -5,7 +5,11 @@ export class VerticalLine {
         this.objects = objects;
         this.direction = speed >= 0;
         this.speed = Math.abs(speed);
-        this.objectHeight = this.direction ? this.objects[0].clientHeight : 0;
+        try {
+            this.objectHeight = this.direction ? this.objects[0].clientHeight : 0;
+        } catch (e) {
+            console.log(e);
+        }
         this.containerHeight = this.container.clientHeight;
         this.initialOffsets = initialOffsets;
         this.removed = false;
@@ -27,12 +31,13 @@ export class VerticalLine {
     }
 
     run() {
+        this.objectHeight = this.objects[0].offsetHeight;
         if (this.direction) this.objects.forEach(object => {
             let currentPos = parseFloat(object.style.top);
             currentPos += this.speed;
 
-            if (currentPos > this.containerHeight) {
-                currentPos = -this.objectHeight;
+            if (currentPos > this.containerHeight + this.objectHeight) {
+                currentPos = -this.objectHeight * 2;
             }
 
             object.style.top = currentPos + 'px';
@@ -41,8 +46,8 @@ export class VerticalLine {
             this.objects.forEach(object => {
                 let currentPos = parseFloat(object.style.top);
                 currentPos -= this.speed;
-                if (currentPos < this.objectHeight) {
-                    currentPos = this.containerHeight;
+                if (currentPos < -2 * this.objectHeight) {
+                    currentPos = this.containerHeight //+ this.objectHeight;
                 }
 
                 object.style.top = currentPos + 'px';
@@ -75,7 +80,7 @@ export class HorizontalLine {
 
 }
 
-export const line1 = new VerticalLine(
+export var line1 = new VerticalLine(
     document.getElementById('coins1'),
     [
         document.getElementById('object1'),
@@ -85,45 +90,52 @@ export const line1 = new VerticalLine(
         document.getElementById('object5'),
         document.getElementById('object6'),
         document.getElementById('object7'),
-        document.getElementById('object8')
+        document.getElementById('object8'),
+        document.getElementById('object9'),
+        document.getElementById('object10')
     ],
     1,
-    [0, 115, 350, 470, 590, 710, 945, 1065]
+    [0, 115, 350, 470, 590, 710, 945, 1065, 1180, 1295]
+    //[-120, 0, 120, 120 * 3, 120 * 4, 120 * 5, 120 * 6, 120 * 7, 120 * 8, 120 * 9, 120 * 10]
 )
 
-export const line2 = new VerticalLine(
+export var line2 = new VerticalLine(
     document.getElementById('coins2'),
     [
-        document.getElementById('object9'),
-        document.getElementById('object10'),
         document.getElementById('object11'),
         document.getElementById('object12'),
         document.getElementById('object13'),
         document.getElementById('object14'),
         document.getElementById('object15'),
-        document.getElementById('object16')
-    ],
-    -2,
-    [0, 115, 350, 470, 590, 710, 945, 1065]
-)
-
-export const line3 = new VerticalLine(
-    document.getElementById('coins3'),
-    [
+        document.getElementById('object16'),
         document.getElementById('object17'),
         document.getElementById('object18'),
         document.getElementById('object19'),
-        document.getElementById('object20'),
+        document.getElementById('object20')
+    ],
+    -2,
+    [0, 115, 350, 470, 590, 710, 945, 1065, 1180, 1295, 1410]
+)
+
+export var line3 = new VerticalLine(
+    document.getElementById('coins3'),
+    [
         document.getElementById('object21'),
         document.getElementById('object22'),
         document.getElementById('object23'),
         document.getElementById('object24'),
         document.getElementById('object25'),
         document.getElementById('object26'),
-        document.getElementById('object27')
+        document.getElementById('object27'),
+        document.getElementById('object28'),
+        document.getElementById('object29'),
+        document.getElementById('object30'),
+        document.getElementById('object31'),
+        document.getElementById('object32'),
+        document.getElementById('object33')
     ],
     0.3,
-    [0, 120, 240, 360, 480, 600, 720, 840, 960, 1080]
+    [0, 120, 240, 360, 480, 600, 720, 840, 960, 1080, 1200, 1320]
 )
 
 //
@@ -154,7 +166,7 @@ export class FlatLine {
     }
 
     run() {
-        this.objectWidth=this.objects[0].offsetWidth;
+        this.objectWidth = this.objects[0].offsetWidth;
         if (this.direction) {
             this.objects.forEach(object => {
                 let currentPos = parseFloat(object.style.left);

@@ -1,4 +1,4 @@
-import {FlatLine, line1, line2, line3} from "./coins.js";
+import {FlatLine, line1, line2, line3, VerticalLine} from "./coins.js";
 
 export const orientation = () => {
     const screenWidth = window.screen.width;
@@ -41,6 +41,30 @@ const coinPaths1 = [
 class Adaptive {
     constructor() {
         this.main_for_desktop = document.getElementById('main');
+
+        if (
+            window.screen.width > 1000
+            && window.screen.width < 1300
+            && window.screen.height < 800
+            && window.screen.height > 600
+        ) {
+            //1280x720
+            // line1.stop()
+            // line2.stop()
+            // line3.stop()
+            document.getElementById('object8').remove();
+            document.getElementById('object9').remove();
+            document.getElementById('object6').remove();
+
+            document.getElementById('object18').remove();
+            document.getElementById('object19').remove();
+            document.getElementById('object20').remove();
+
+            document.getElementById('object33').remove();
+            document.getElementById('object32').remove();
+            document.getElementById('object31').remove();
+
+        }
     }
 
     toMobile() {
@@ -267,8 +291,8 @@ class Adaptive {
         for (let i = 1; i < social_media_area_elements.length; i++) {
             let a = social_media_area_elements[i].children[0]
             let svg = a.children[0];
-            svg.setAttribute('width','96');
-            svg.setAttribute('height','96');
+            svg.setAttribute('width', '96');
+            svg.setAttribute('height', '96');
             newDiv.appendChild(social_media_area_elements[i]);
         }
         social_media_area_elements[1].insertAdjacentHTML('afterend',

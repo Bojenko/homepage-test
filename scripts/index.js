@@ -17,6 +17,13 @@ function makeDarker(element) {
 
 }
 
+window.changeLang = (e) => {
+    const childs = e.children;
+    const currentLang = childs[1].textContent;
+    if(currentLang==='RU')
+    childs[1].innerHTML='EN'
+    else childs[1].innerHTML='RU'
+}
 // function buttonActive(button) {
 //     button.style.backgroundColor = "rgba(25, 29, 10, 0.54)";
 // }
@@ -26,7 +33,7 @@ function makeDarker(element) {
 // }
 
 window.bodyLoading = () => {
-    makeBlubs(10);
+    makeBlubs();
     orientation();
     if (!desktop) _interface.toMobile();
 }

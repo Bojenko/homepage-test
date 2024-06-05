@@ -26,8 +26,25 @@ export const makeBlub = (
     blubWindow[0].appendChild(newBlubElement);
 }
 
-export const makeBlubs = (times)=> {
-    for (let i = 0; i < times; i++) {
-        makeBlub();
-    }
+export const makeBlubs = ()=> {
+    makeBlub(
+        'Microsoft Designer теперь позволяет каждому создавать стикеры',
+        '05.06.2024'
+    );
+    makeBlub(
+        'В «Дзене» появился новый вид каналов с возможностью подписки',
+        '05.06.2024'
+    );
+    makeBlub(
+        'Google работает над расширением для Spotify для интеграции с Gemini',
+        '05.06.2024'
+    );
+    makeBlub(
+        'AMD запустила программу Bug Bounty с вознаграждением до $30 тысяч',
+        '05.06.2024'
+    );
+    makeBlub(
+        'Минпромторг заказал разработку аналога интегральной схемы Intel',
+        '05.06.2024'
+    );
 }

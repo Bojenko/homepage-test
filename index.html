@@ -7,9 +7,8 @@
     <link rel="stylesheet" href="./stylesheets/index1920.css">
     <link rel="stylesheet" href="./stylesheets/index1280.css">
     <link rel="stylesheet" href="./stylesheets/index720.css">
+    <link rel="stylesheet" href="./stylesheets/landscape.css">
     <script type="module" src="./scripts/index.js"></script>
-<!--    <script src="scripts/blub.js"></script>-->
-<!--    <script src="./scripts/coins.js"></script>-->
 </head>
 <body onload="bodyLoading()">
 <div class="main" id="main">
@@ -43,13 +42,13 @@
                     <div style="color: #F97247">OPEN</div>
                 </div>
                 <div class="sometext">Maybe You Maybe Me.</div>
-                <div>
-                    <a href="#">
+                <div class="partner_button_div">
+                    <a href="#" class="partner_button_a">
                         <div class="partner_button" onclick="makeBlub()">PARTNER</div>
                     </a>
                 </div>
             </div>
-            <div class="middle_section">
+            <div class="middle_section" id="middle_section">
                 <div class="coins" id="coins">
                     <div class="coins1" id="coins1">
                         <div class="movingObject" id="object1">
@@ -141,7 +140,7 @@
                 </div>
 
             </div>
-            <div class="right_section">
+            <div class="right_section" id="right_section">
                 <div class="blub_section">
                     BLUB
                     <div class="blub_window">
@@ -155,14 +154,14 @@
 
             </div>
         </div>
-        <div class="footer-container">
-            <div class="info_pages">
+        <div class="footer-container" id="footer_container">
+            <div class="info_pages" id="info_pages">
                 <span><a href="#" style="color: #F97247"><u>Terms & Conditions</u></a></span>
                 <span><a href="#">Cookies</a></span>
                 <span><a href="#">Contacts</a></span>
             </div>
-            <div class="social_media_area">
-                <div class="oursocialmedia">Our social media:</div>
+            <div class="social_media_area" id="social_media_area">
+                <div class="oursocialmedia" id="oursocialmedia">Our social media:</div>
                 <div class="twitter_icon">
                     <a href="#">
                         <svg onmouseover="makeBrightly(this)" onmouseout="makeDarker(this)" width="32" height="32"

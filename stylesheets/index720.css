@@ -1,4 +1,4 @@
-@media  (max-width: 1000px) or (orientation:portrait) {
+@media (orientation: portrait) {
 
     html {
         background-color: #191D0A;
@@ -12,18 +12,15 @@
 
     }
 
-    body {
-        background: url('../public/back.svg') no-repeat center center fixed;
-        /*background-color: #191D0A;*/
-
-    }
 
     .main_mobile {
         background-size: auto;
         height: 100vh;
 
+
     }
-    .popup_menu{
+
+    .popup_menu {
         padding-top: 3rem;
         position: fixed;
         z-index: 200;
@@ -36,7 +33,8 @@
         align-items: center;
         background-color: #191D0A;
     }
-    .popup_menu_element{
+
+    .popup_menu_element {
         display: flex;
         width: 95%;
         height: 8rem;
@@ -50,7 +48,8 @@
         box-sizing: border-box;
 
     }
-    .buttons_on_popup{
+
+    .buttons_on_popup {
         display: flex;
         width: 100%;
         border-radius: 96px;
@@ -67,9 +66,11 @@
         height: 100vh;
         margin: 0;
         backdrop-filter: blur(100px);
-        display: grid;
-        grid-template-rows: 1fr 9fr 1fr;
+        display: flex;
+        flex-direction: column;
         justify-items: center;
+        align-items: center;
+
 
     }
 
@@ -78,61 +79,76 @@
         flex-direction: column;
         margin-top: 10vh;
         width: 100%;
-        height: 100vh;
+        height: 200vh;
+        background-image: url("../public/dot2.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
     }
 
     .left_section {
-
+        display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
-        align-content: center;
+        width: 100%;
+        background-image: url("../public/dot1.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 13rem;
+        padding-bottom: 5rem;
+
     }
 
     .left_title {
-        font-size: 7rem;
+        font-size: 9rem;
+        text-align: center;
     }
 
     .partner_button {
-        font-size: x-large;
-        display: grid;
+        font-size: 4rem;
         border: 2px solid #F97247;
-        border-radius: 48px;
+        border-radius: 96px;
         background-color: #F97247;
-        height: 2.5rem;
-        width: 10rem;
+        height: 9rem;
+        width: 95%;
         justify-items: center;
         text-align: center;
-        align-items: center;
+        align-content: center;
+        margin-top: 3rem;
+        margin-bottom: 6rem;
+
 
     }
 
     .sometext {
         opacity: 60%;
-        font-size: 1rem;
-        margin-bottom: 1rem;
-        margin-top: 1rem;
+        font-size: 4rem;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
     }
 
     .right_section {
         display: flex;
         justify-content: center;
-        align-items: flex-end;
+        align-items: center;
         flex-direction: column;
+
     }
 
     .blub_section {
         display: flex;
         flex-direction: column;
         align-items: center;
-        font-size: 1rem;
+        font-size: 9rem;
+        width: 95%;
     }
 
     .blub_window {
         display: flex;
-        height: 20rem;
-        width: 17rem;
-        border: 3px solid #F97247;
-        border-radius: 50px;
+        height: 70rem;
+        width: 100%;
+        border: 0.5rem solid #F97247;
+        border-radius: 156px;
         margin-top: 1.5rem;
         background-color: #FFFFFF1F;
         flex-direction: column;
@@ -141,18 +157,18 @@
     }
 
     .blub_element {
-        font-size: 1rem;
-        margin-left: 0.5rem;
-        margin-right: 0.5rem;
-        margin-top: 1rem;
+        font-size: 3.5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-top: 2rem;
         background-color: #311212;
-        border-radius: 60px;
-        padding: 2rem 2rem 1rem 4rem;
+        border-radius: 124px;
+        padding: 2.5rem 2.5rem 1.5rem 4.5rem;
 
     }
 
     .middle_section {
-
+        width: 100%;
     }
 
     .movingObject {
@@ -160,56 +176,56 @@
     }
 
     .coins {
-        display: grid;
-        grid-template: "j k l";
-        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
         overflow: hidden;
     }
 
     .coins1 {
-        display: grid;
-        grid-area: j;
-        flex-direction: column;
+        flex-direction: row;
         overflow: hidden;
-        height: 100vh;
-        opacity: 50%;
-        width: 12ch;
+        height: 20ch;
+        opacity: 35%;
+        width: 100%;
+        position: relative;
 
     }
 
     .coins2 {
-        display: grid;
-        grid-area: k;
-        flex-direction: column;
+        flex-direction: row;
         overflow: hidden;
-        height: 100vh;
-        width: 12ch;
+        height: 20ch;
+        opacity: 100%;
+        width: 100%;
+        position: relative;
+
     }
 
     .coins3 {
-        display: grid;
-        grid-area: l;
-        flex-direction: column;
+        flex-direction: row;
         overflow: hidden;
-        height: 100vh;
-        width: 12ch;
+        height: 20ch;
         opacity: 50%;
+        width: 100%;
+        position: relative;
+
     }
 
+
     .blub_element_first {
-        font-size: 1rem;
-        margin-left: 0.5rem;
-        margin-right: 0.5rem;
-        margin-top: 1rem;
+        font-size: 3.5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-top: 2rem;
         background-color: #F97247;
-        border-radius: 60px;
-        padding: 2rem 2rem 1rem 4rem;
+        border-radius: 124px;
+        padding: 2.5rem 2.5rem 1.5rem 4.5rem;
 
     }
 
     .blub_date {
         padding-top: 1rem;
-        padding-bottom: 0rem;
         color: #FFFFFF99;
     }
 
@@ -227,25 +243,29 @@
 
     }
 
-    .left_section {
-        display: grid;
-
-    }
 
     .footer-container {
-        width: 100%;
-        height: 10vh;
-        position: relative;
-        bottom: 0;
-        display: grid;
-        justify-content: space-evenly;
-        align-items: center;
-        border: 4px solid #F97247;
-        border-bottom: 0px;
-        border-radius: 64px 64px 0px 0px;
-        background-color: #311212;
-        z-index: 100;
+        font-size: 3rem;
+        margin-top: 6em;
+        border: 0.5rem solid #F97247;
+        border-radius: 156px 156px 0px 0px;
+        background-image: linear-gradient(to right, #311212, #502722);
         opacity: 100%;
+        height: 200rem;
+        display: flex;
+        flex-direction: column;
+        padding: 1.5em;
+    }
+
+    .span_i {
+        margin-top: 1rem;
+    }
+
+    .media_icons {
+        margin-top: 1em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     .menu {
@@ -264,7 +284,8 @@
         align-items: center;
         margin-right: 2em;
     }
-    #lang_value{
+
+    #lang_value {
         visibility: hidden;
     }
 
@@ -278,35 +299,21 @@
         justify-self: start;
     }
 
-    .footer-container {
-        display: grid;
-        grid-template: ". . . . . ."
-                   "a . . . . f";
-    }
 
     .info_pages {
-        grid-area: a;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        text-align: center;
-        justify-content: center;
+        display: flex;
+        flex-direction: column;
     }
 
     .social_media_area {
-        display: grid;
-        column-gap: 2%;
-        row-gap: 10%;
-        grid-area: f;
-        grid-template:
-                "s s s s s s"
-                "t l y o g v";
+        display: flex;
+        flex-direction: column;
 
     }
 
     .oursocialmedia {
-        display: grid;
-        grid-area: s;
-        text-align: right;
+        display: flex;
+        margin-top: 2em;
     }
 
     .twitter_icon {
@@ -389,6 +396,7 @@
         margin-left: 1rem;
         margin-right: 1rem;
     }
+
     .btn1 {
         display: flex;
         flex-direction: row;
@@ -403,7 +411,7 @@
         background-color: #F97247;
     }
 
-    .menu_button{
+    .menu_button {
         display: flex;
         flex-direction: row;
         border-radius: 100px;
@@ -416,7 +424,7 @@
         margin-right: 1rem;
     }
 
-    .login_button{
+    .login_button {
         display: flex;
         width: 95%;
         height: 8rem;
@@ -430,7 +438,8 @@
         padding-left: 2rem;
         box-sizing: border-box;
     }
-    .signup_button{
+
+    .signup_button {
         display: flex;
         width: 95%;
         height: 8rem;
@@ -446,5 +455,3 @@
     }
 
 }
-
-

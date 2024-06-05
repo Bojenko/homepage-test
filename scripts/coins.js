@@ -71,6 +71,10 @@ export class VerticalLine {
     }
 }
 
+export class HorizontalLine {
+
+}
+
 export const line1 = new VerticalLine(
     document.getElementById('coins1'),
     [
@@ -121,3 +125,80 @@ export const line3 = new VerticalLine(
     0.3,
     [0, 120, 240, 360, 480, 600, 720, 840, 960, 1080]
 )
+
+//
+export class FlatLine {
+    constructor(container, objects, speed, initialOffsets, movingByDefault = true) {
+        this.container = container;
+        this.objects = objects;
+        this.direction = speed >= 0;
+        this.speed = Math.abs(speed);
+        this.objectWidth = this.objects[0].offsetWidth;
+        this.containerWidth = this.container.clientWidth;
+        this.initialOffsets = initialOffsets;
+        this.removed = false;
+
+        for (let i = 0; i < this.objects.length; i++) {
+            this.initialOffsets.push(-i * (this.objectWidth + 10));
+        }
+        this.objects.forEach((object, index) => {
+            object.style.left = this.initialOffsets[index] + 'px';
+        });
+
+        this.run = this.run.bind(this);
+        if (movingByDefault) this.interval = setInterval(this.run, 20);
+        else {
+            this.interval = setInterval(this.run, 20);
+            clearInterval(this.interval);
+        }
+    }
+
+    run() {
+        this.objectWidth=this.objects[0].offsetWidth;
+        if (this.direction) {
+            this.objects.forEach(object => {
+                let currentPos = parseFloat(object.style.left);
+                currentPos += this.speed;
+
+                if (currentPos > this.containerWidth + this.objectWidth) {
+                    currentPos = -this.objectWidth;
+                }
+
+                object.style.left = currentPos + 'px';
+            });
+        } else {
+            this.objects.forEach(object => {
+                let currentPos = parseFloat(object.style.left);
+                currentPos -= this.speed;
+
+                if (currentPos < -2 * this.objectWidth) {
+                    currentPos = this.containerWidth;
+                }
+
+                object.style.left = currentPos + 'px';
+            });
+        }
+    }
+
+    stop() {
+        clearInterval(this.interval);
+    }
+
+    start() {
+        this.interval = setInterval(this.run, 20);
+    }
+
+    hide() {
+        this.container.remove();
+        this.removed = true;
+    }
+
+    show() {
+        if (this.removed) {
+            document
+                .getElementById('coins')
+                .appendChild(this.container);
+            this.removed = false;
+        }
+    }
+}

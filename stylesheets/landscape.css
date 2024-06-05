@@ -1,4 +1,4 @@
-@media all and (min-width: 1000px) and (max-width: 1650px) {
+@media all and (orientation: landscape) {
 
     html {
         background-color: #191D0A;

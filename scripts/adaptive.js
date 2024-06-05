@@ -1,4 +1,4 @@
-import {line1, line2, line3} from "./coins.js";
+import {FlatLine, line1, line2, line3} from "./coins.js";
 
 export const orientation = () => {
     const screenWidth = window.screen.width;
@@ -12,6 +12,31 @@ export const orientation = () => {
     }
 }
 
+const coinPaths3 = [
+    '../public/coins/coin5.svg',
+    '../public/coins/coin10.svg',
+    '../public/coins/coin5.svg',
+    '../public/coins/coin3.svg',
+    '../public/coins/coin11.svg',
+    '../public/coins/coin3.svg',
+    '../public/coins/coin10.svg',
+];
+const coinPaths2 = [
+    '../public/coins/coin3.svg',
+    '../public/coins/coin12.svg',
+    '../public/coins/coin1.svg',
+    '../public/coins/coin2.svg',
+    '../public/coins/coin3.svg',
+    '../public/coins/coin1.svg',
+]
+const coinPaths1 = [
+    '../public/coins/coin7.svg',
+    '../public/coins/coin6.svg',
+    '../public/coins/coin5.svg',
+    '../public/coins/coin13.svg',
+    '../public/coins/coin7.svg',
+    '../public/coins/coin6.svg',
+]
 
 class Adaptive {
     constructor() {
@@ -132,6 +157,126 @@ class Adaptive {
         })
         document.getElementById('buttons')?.appendChild(menuButton);
 
+        //making content
+        let partner_button = document.getElementsByClassName('partner_button_div');
+        partner_button[0].remove();
+        partner_button = document.createElement('div');
+        partner_button.setAttribute('class', 'partner_button');
+        partner_button.insertAdjacentText('afterbegin', 'PARTNER');
+        document.getElementsByClassName('sometext')[0].after(partner_button);
+
+        let iterator = 0;
+        for (let i = 1; i <= 3; i++) {
+            const coins_N = document.createElement('div');
+            coins_N.setAttribute('class', `coins${i}`);
+            coins_N.setAttribute('id', `coins${i}`);
+            partner_button.after(coins_N);
+
+            function returnCoinsNames(i) {
+                if (i === 1) return coinPaths1;
+                if (i === 2) return coinPaths2;
+                if (i === 3) return coinPaths3;
+            }
+
+            let coinsPaths = returnCoinsNames(i);
+
+            coinsPaths.forEach((value) => {
+                iterator++;
+                const img = document.createElement('img');
+                img.setAttribute('src', value);
+                img.setAttribute('height', '175rem')
+                const movingObject = document.createElement('div');
+                movingObject.setAttribute('class', 'movingObject');
+                movingObject.setAttribute('id', `object${iterator}`);
+                movingObject.appendChild(img);
+                coins_N.appendChild(movingObject);
+
+            });
+
+        }
+
+
+        const f_line1 = new FlatLine(
+            document.getElementById('coins1'),
+            [
+                document.getElementById('object1'),
+                document.getElementById('object2'),
+                document.getElementById('object3'),
+                document.getElementById('object4'),
+                document.getElementById('object5'),
+                document.getElementById('object6'),
+            ],
+            0.3,
+            [-1 * 190, 0, 190, 190 * 2, 190 * 4, 190 * 5],
+        )
+        const f_line2 = new FlatLine(
+            document.getElementById('coins2'),
+            [
+                document.getElementById('object7'),
+                document.getElementById('object8'),
+                document.getElementById('object9'),
+                document.getElementById('object10'),
+                document.getElementById('object11'),
+                document.getElementById('object12'),
+            ],
+            -2,
+            [0, 190, 190 * 3, 190 * 4, 190 * 5, 190 * 6],
+        );
+        const f_line3 = new FlatLine(
+            document.getElementById('coins3'),
+            [
+                document.getElementById('object13'),
+                document.getElementById('object14'),
+                document.getElementById('object15'),
+                document.getElementById('object16'),
+                document.getElementById('object17'),
+                document.getElementById('object18'),
+                document.getElementById('object19'),
+            ],
+            1,
+            [-1 * 190, 0, 190, 190 * 2, 190 * 3, 190 * 4, 190 * 5],
+        )
+
+        const footer_container = document.getElementById('footer_container');
+        footer_container.remove();
+        document.getElementById('right_section').after(footer_container);
+
+        const info_pages_spans = document
+            .getElementById('info_pages')
+            .querySelectorAll('span');
+        for (let i = 0; i < info_pages_spans.length; i++) {
+            info_pages_spans[i].remove();
+
+        }
+        const info_pages = document.getElementById('info_pages');
+
+
+        info_pages.insertAdjacentHTML('afterbegin', `<span class="span_i"><a href="#">Brand Guide</a></span>`)
+        info_pages.insertAdjacentHTML('afterbegin', `<span class="span_i"><a href="#">Careers</a></span>`)
+        info_pages.insertAdjacentHTML('afterbegin', `<span class="span_i"><a href="#">Contacts</a></span>`)
+        info_pages.insertAdjacentHTML('afterbegin', `<span class="span_i"><a href="#">Cookies</a></span>`)
+        info_pages.insertAdjacentHTML('afterbegin', `<span class="span_i"><a href="#">Terms & Conditions</a></span>`)
+
+        const social_media_area_elements = document
+            .getElementById('social_media_area')
+            .querySelectorAll('div');
+        console.log(social_media_area_elements);
+        const newDiv = document.createElement('div');
+        newDiv.setAttribute('class', 'media_icons');
+        social_media_area_elements[0].after(newDiv);
+        for (let i = 1; i < social_media_area_elements.length; i++) {
+            let a = social_media_area_elements[i].children[0]
+            let svg = a.children[0];
+            svg.setAttribute('width','96');
+            svg.setAttribute('height','96');
+            newDiv.appendChild(social_media_area_elements[i]);
+        }
+        social_media_area_elements[1].insertAdjacentHTML('afterend',
+            `<div class="facebook_icon"><a href="#"><img src="../public/facebook_icon.svg" height="96" width="96"></a></div>`
+        );
+        social_media_area_elements[2].insertAdjacentHTML('beforebegin',
+            `<div class="instagram_icon"><a href="#"><img src="../public/instagram_icon.svg" height="96" width="96"></a></div>`
+        )
 
     }
 
@@ -149,9 +294,3 @@ export var desktop = orientation() !== 'portrait';
 
 
 export const _interface = new Adaptive();
-
-window.addEventListener('resize', function (ev) {
-    orientation();
-    if (desktop) _interface.toDesktop();
-    else _interface.toMobile();
-})
